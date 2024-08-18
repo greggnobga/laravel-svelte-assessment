@@ -1,0 +1,25 @@
+/** Footer. */
+.footer {
+    background: #fff000;
+}
+
+/** Footer wrapper. */
+.footer-wrapper {
+    min-height: 60px;
+    @include flexbox(row, space-between, center, wrap);
+
+    .footer-brand {
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+
+    .footer-link {
+        .link-items {
+            @include flexbox(row, center, center, wrap);
+
+            .link-item {
+                padding: 1rem;
+            }
+        }
+    }
+}

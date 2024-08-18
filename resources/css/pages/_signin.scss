@@ -1,0 +1,101 @@
+.signin {
+    @include flexbox(column, start, center, wrap);
+    min-height: 100vh;
+
+    .signin-header {
+        background: url('../../../public/images/user/header.jpg') center center no-repeat;
+        @include flexbox(column, center, center, wrap);
+        width: 100%;
+        min-height: 200px;
+        color: $color-white;
+
+        .header-text {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+            font-size: 2.5rem;
+        }
+    }
+
+    .signin-form {
+        @include flexbox(column, center, center, wrap);
+        margin-top: 3rem;
+        background: $color-white;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        width: 90%;
+
+        .form-error {
+            @include flexbox(row, start, start, wrap);
+            padding-top: 1rem;
+            min-width: 80%;
+
+            .error-message {
+                min-width: 100%;
+                border: 1px solid rgba(242, 38, 19, 0.15);
+                border-radius: 4px;
+                padding: 0.5rem;
+                color: rgba(242, 38, 19, 1);
+                background: rgba(242, 38, 19, 0.25);
+            }
+        }
+
+        .form-group {
+            @include flexbox(column, center, center, wrap);
+            padding: 1rem 3rem;
+            width: 90%;
+
+            .form-label {
+                width: 100%;
+                text-transform: uppercase;
+                font-size: small;
+                font-weight: bold;
+            }
+
+            .form-input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #aaaaaa;
+                border-radius: 4px;
+            }
+        }
+
+        .form-action {
+            @include flexbox(row, center, center, wrap);
+            gap: 2rem;
+            padding-bottom: 1rem;
+
+            .action-button {
+                cursor: pointer;
+                text-align: left;
+            }
+
+            .action-forgot {
+                font-size: 10px;
+                font-weight: lighter;
+                color: #1155cc;
+                text-align: right;
+            }
+        }
+    }
+
+    .signin-rule {
+        @include flexbox(row, end, end, wrap);
+        min-width: 90%;
+
+        .rule-text {
+            padding: 0.5rem;
+            font-size: 10px;
+            font-weight: lighter;
+            color: #1155cc;
+            text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signin {
+        min-height: 100%;
+
+        .signin-form {
+            min-height: 100%;
+        }
+    }
+}
